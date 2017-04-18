@@ -1,19 +1,11 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
-  <groupId>timestamps-rest-api</groupId>
-  <artifactId>timestamps-rest-api</artifactId>
+  <groupId>timestamps-web-ui</groupId>
+  <artifactId>timestamps-web-ui</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <packaging>war</packaging>
   <build>
     <sourceDirectory>src</sourceDirectory>
-    <resources>
-      <resource>
-        <directory>src</directory>
-        <excludes>
-          <exclude>**/*.java</exclude>
-        </excludes>
-      </resource>
-    </resources>
     <plugins>
       <plugin>
         <artifactId>maven-compiler-plugin</artifactId>
@@ -33,7 +25,6 @@
       </plugin>
     </plugins>
   </build>
-  
   <properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<spring.version>4.3.2.RELEASE</spring.version>
@@ -54,6 +45,11 @@
 		</dependencies>
 	</dependencyManagement>
 	<dependencies>
+	<dependency>
+    <groupId>jstl</groupId>
+    <artifactId>jstl</artifactId>
+    <version>1.2</version>
+</dependency>
 	    <!-- https://mvnrepository.com/artifact/org.influxdb/influxdb-java -->
         <dependency>
             <groupId>org.influxdb</groupId>

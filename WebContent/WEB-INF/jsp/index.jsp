@@ -4,6 +4,7 @@
 <%@ page import="timestamps.models.Entity"  %> 
 <%@ page import="timestamps.dao.impl.EntityDAOImpl"  %>
 <%@ page import="java.util.List"  %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -12,12 +13,10 @@
 </head>
 <body>
 
-{% for (int i = 0; i < entList.size(); i++){ %}
-   <div> {% entList.get(i).getName(); %} </div>
-   <div> {% entList.get(i).getGroup(); %} </div>
-   <div> {% entList.get(i).getAddress(); %} </div>
 
- }%}
+<c:forEach var="entity" items="${entList}">
+	${entity.getName()} 
+</c:forEach>
 
 </body>
 </html>

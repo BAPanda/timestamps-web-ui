@@ -10,12 +10,12 @@
    http://www.springframework.org/schema/mvc 
    http://www.springframework.org/schema/mvc/spring-mvc.xsd">
 
-   <context:component-scan base-package="timestamps.controllers" />
+   <context:component-scan base-package="timestamps" />
    
    <!--mvc:resources mapping="/resources/**" location="WEB_INF/static"/-->
 
    <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
-      <property name="prefix" value="/WEB_INF/jsp/" />
+      <property name="prefix" value="WEB-INF/jsp/" />
       <property name="suffix" value=".jsp" />
    </bean>
    
