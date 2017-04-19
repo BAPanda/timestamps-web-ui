@@ -12,10 +12,10 @@
 <title>Insert title here</title>
 </head>
 <body>
-
+<link rel="stylesheet" href="<c:url value="/resources/style.css"/>" type="text/css" media="screen">
 
 <c:forEach var="entity" items="${entList}">
-	${entity.getName()} 
+	<div class="entlnk">${entity.getName()}</div> 
 </c:forEach>
 
 </body>
