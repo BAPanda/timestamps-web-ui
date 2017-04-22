@@ -75,6 +75,8 @@ public class EntityDAOImpl implements EntityDAO {
 			
 			entity.setID(rs.getBigDecimal("ID").toBigInteger());
 			entity.setName(rs.getString("Name"));
+			entity.setAddress(rs.getString("Address"));
+			entity.setGroup(rs.getBigDecimal("Group").toBigInteger());
 			
 			return entity;
 		}

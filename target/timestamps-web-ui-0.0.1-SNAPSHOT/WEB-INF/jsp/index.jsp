@@ -15,7 +15,7 @@
 <link rel="stylesheet" href="<c:url value="/resources/style.css"/>" type="text/css" media="screen">
 
 <c:forEach var="entity" items="${entList}">
-	<div class="entlnk">${entity.getName()}</div> 
+	<div class="entlnk">${entity.getName()} ${entity.getAddress()}</div> 
 </c:forEach>
 
 </body>

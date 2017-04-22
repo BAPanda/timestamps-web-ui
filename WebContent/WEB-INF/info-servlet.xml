@@ -37,7 +37,7 @@
 	<bean id="entityDAOImpl" class="timestamps.dao.impl.EntityDAOImpl">
 		<property name="jdbcTemplate" ref="jdbcTemplate"></property>
 	</bean>
-   <mvc:resources mapping="/resources/**" location="WEB-INF/static"/>
+   <mvc:resources mapping="/resources/**" location="WEB-INF/static/"/>
    <mvc:annotation-driven />
    <!--bean id="statisticsController" class="timestamps.controllers.InfoController"></bean-->
 	
