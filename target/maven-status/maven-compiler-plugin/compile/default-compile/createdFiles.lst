@@ -1,3 +1,4 @@
+timestamps\dao\impl\EntityDAOImpl$3.class
 timestamps\models\Entity.class
 timestamps\dao\impl\EntityDAOImpl$EntityRowMapper.class
 timestamps\dao\impl\EntityDAOImpl$1.class
@@ -5,3 +6,4 @@ timestamps\dao\impl\EntityDAOImpl.class
 timestamps\dao\impl\EntityDAOImpl$2.class
 timestamps\controllers\InfoController.class
 timestamps\dao\EntityDAO.class
+timestamps\controllers\AddController.class

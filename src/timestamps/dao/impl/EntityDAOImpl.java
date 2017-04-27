@@ -4,6 +4,7 @@ import java.math.BigInteger;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.List;
+import java.util.Random;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataAccessException;
@@ -63,8 +64,27 @@ public class EntityDAOImpl implements EntityDAO {
 	}
 	
 	@Override
-	public void add(Entity entity) {		
-		jdbcTemplate.update("INSERT  \"Entity\" (\"ID\", \"Name\") VALUES (?, ?)", entity.getID(), entity.getName());
+	public boolean validate(Entity entity){
+		BigInteger groupID = jdbcTemplate.query("SELECT \"ID\" FROM \"Group\" WHERE \"ID\" = ?", new ResultSetExtractor<BigInteger>(){
+			@Override
+			public BigInteger extractData(ResultSet rs) throws SQLException, DataAccessException {
+				if(rs.next()){
+					return rs.getBigDecimal("ID").toBigInteger();
+				} else {
+					return null;
+				}
+			}
+		}, entity.getGroup().intValue());
+		
+		System.out.println(groupID);
+		
+		return groupID != null;
+	}
+	
+	@Override
+	public void add(Entity entity) {
+		entity.setID(BigInteger.valueOf(new Random().nextLong() % 200));
+		jdbcTemplate.update("INSERT INTO \"Entity\" (\"ID\", \"Name\", \"Group\") VALUES (?, ?, ?)", entity.getID().intValue(), entity.getName(), entity.getGroup().intValue());
 	}
 	
 	class EntityRowMapper implements RowMapper<Entity>{

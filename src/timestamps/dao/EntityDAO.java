@@ -11,4 +11,5 @@ public interface EntityDAO {
 	public Entity getByName(String name);
 	
 	public void add(Entity entity);
+	public boolean validate(Entity entity);
 }

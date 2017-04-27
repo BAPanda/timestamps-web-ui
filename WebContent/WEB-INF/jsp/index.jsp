@@ -10,10 +10,11 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Insert title here</title>
+<link rel="stylesheet" href="<c:url value="/resources/style.css"/>"
+		type="text/css" media="screen">
 </head>
 <body>
-	<link rel="stylesheet" href="<c:url value="/resources/style.css"/>"
-		type="text/css" media="screen">
+	
 	<div class="table_header">
 		<div class="table_item">Name</div>
 		<div class="table_item">Address</div>
@@ -24,6 +25,12 @@
 			<div class="table_item">${entity.getAddress()}</div>
 		</div>
 	</c:forEach>
+	
+	<form class="table_row" method="get" action="/timestamps-web-ui/addsensor">
+		<input class="table_item" type="text" name="name">
+		<input class="table_item" type="text" name="group">
+		<button class="table_item" type="submit">Добавить устройство</button>
+	</form>
 
 </body>
 </html>

@@ -1,5 +1,29 @@
-.entlnk {
-	font-size: 20px;
-	margin-top: 20px;
-	background: #000000;
+.table_header {
+	color: #777674;
+	font-weight: bold;
+	text-decoration: none;
+	text-shadow: rgba(255, 255, 255, .5) 1px 1px, rgba(100, 100, 100, .3)
+		3px 7px 3px;
+	user-select: none;
+	outline: none;
+	border-radius: 3px/100%;
+	background-image: radial-gradient(#FFFFFF, #EDEDEE);
+	box-shadow: rgba(0, 0, 0, .5) 3px 10px 10px -10px;
+	width: 270px;
+	height: 100px;
+	margin-top: 10px;
+	margin-right: 50px;
+}
+
+.table_row {
+	display: flex;
+}
+
+.table_item {
+	margin-top: 10px;
+	display: inline-block;
+	width: 100px;
+	height: 70px;
+	border: 2px outset;
+	border-color: #EDEDEE;
 }
