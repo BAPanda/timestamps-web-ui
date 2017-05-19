@@ -1,5 +1,10 @@
-C:\Users\Jeff\workspaceJ\timestamps-web-ui\src\timestamps\controllers\InfoController.java
+C:\Users\Jeff\workspaceJ\timestamps-web-ui\src\timestamps\controllers\GroupInfoController.java
 C:\Users\Jeff\workspaceJ\timestamps-web-ui\src\timestamps\dao\EntityDAO.java
+C:\Users\Jeff\workspaceJ\timestamps-web-ui\src\timestamps\dao\GroupDAO.java
 C:\Users\Jeff\workspaceJ\timestamps-web-ui\src\timestamps\models\Entity.java
 C:\Users\Jeff\workspaceJ\timestamps-web-ui\src\timestamps\controllers\AddController.java
+C:\Users\Jeff\workspaceJ\timestamps-web-ui\src\timestamps\controllers\SensorInfoController.java
+C:\Users\Jeff\workspaceJ\timestamps-web-ui\src\timestamps\controllers\DeleteController.java
 C:\Users\Jeff\workspaceJ\timestamps-web-ui\src\timestamps\dao\impl\EntityDAOImpl.java
+C:\Users\Jeff\workspaceJ\timestamps-web-ui\src\timestamps\dao\impl\GroupDAOImpl.java
+C:\Users\Jeff\workspaceJ\timestamps-web-ui\src\timestamps\models\Group.java

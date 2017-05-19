@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import timestamps.dao.impl.EntityDAOImpl;
+import timestamps.dao.EntityDAO;
 import timestamps.models.Entity;
 
 @Controller
@@ -17,7 +17,7 @@ import timestamps.models.Entity;
 public class AddController {
 
 	@Autowired
-	private EntityDAOImpl entityDAOImpl;
+	private EntityDAO entityDAOImpl;
 
 	@RequestMapping(method = RequestMethod.GET)
 	public String addSensor(@RequestParam("name") String name,

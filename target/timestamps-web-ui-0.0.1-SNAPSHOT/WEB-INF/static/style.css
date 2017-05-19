@@ -4,12 +4,11 @@
 	text-decoration: none;
 	text-shadow: rgba(255, 255, 255, .5) 1px 1px, rgba(100, 100, 100, .3)
 		3px 7px 3px;
-	user-select: none;
 	outline: none;
 	border-radius: 3px/100%;
 	background-image: radial-gradient(#FFFFFF, #EDEDEE);
 	box-shadow: rgba(0, 0, 0, .5) 3px 10px 10px -10px;
-	width: 270px;
+	width: 350px;
 	height: 100px;
 	margin-top: 10px;
 	margin-right: 50px;
@@ -19,7 +18,12 @@
 	display: flex;
 }
 
+.disabled {
+	background: #777674;
+}
+
 .table_item {
+	margin-left: 10px;
 	margin-top: 10px;
 	display: inline-block;
 	width: 100px;
