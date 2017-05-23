@@ -9,6 +9,7 @@ public interface EntityDAO {
 	public Entity getByID(BigInteger ID);
 	public List<Entity> getAll();
 	public Entity getByName(String name);
+	public List<Entity> getByGroup(BigInteger ID);
 	
 	public void add(Entity entity);
 	public void delete(BigInteger id);

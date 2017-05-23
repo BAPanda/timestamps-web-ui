@@ -15,38 +15,39 @@
 </head>
 <body>
 
-	
+
 	<table>
-	<tr>
-		<td >ID</td>
-		<td >Name</td>
-		<td >Address</td>
-	
-	</tr>
-	<c:forEach var="entity" items="${entList}">
-	
-		<tr >
-			<td >${entity.getID()}</td>
-			<td >${entity.getName()}</td>
-			<td >${entity.getAddress()}</td>
-			<td><form  method="get"
-				action="/timestamps-web-ui/deletesensor">
-				<input  type="hidden" name="id"
-					value="${entity.getID()}">
-				<button  type="submit">Удалить устройство</button>
-			</form></td>
+		<tr>
+			<td>ID</td>
+			<td>Name</td>
+			<td>Address</td>
+
 		</tr>
-	</c:forEach>
+		<c:forEach var="entity" items="${entList}">
+
+			<tr>
+				<td>${entity.getID()}</td>
+				<td>${entity.getName()}</td>
+				<td>${entity.getAddress()}</td>
+				<td><form method="get" action="/timestamps-web-ui/deletesensor">
+						<input type="hidden" name="id" value="${entity.getID()}">
+						<button type="submit">Удалить устройство</button>
+					</form></td>
+			</tr>
+		</c:forEach>
 	</table>
 
-	<form  method="get"
-		action="/timestamps-web-ui/addsensor">
+	<form method="get" action="/timestamps-web-ui/addsensor">
 
-		<div class="disabled"></div>
-		<input type="text" name="name"> <input
-			 type="text" name="group">
-		<button  type="submit">Добавить устройство</button>
+		<input type="text" name="name"> 
+		<select size="1" name="group">
+			<c:forEach var="gr" items="${groups}">
+				<option value="${gr.getID()}">${gr.getAddress()}</option>
+			</c:forEach>
+		</select>
+		<button type="submit">Добавить устройство</button>
 	</form>
+
 
 </body>
 </html>

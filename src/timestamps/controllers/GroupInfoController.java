@@ -13,19 +13,19 @@ import timestamps.dao.GroupDAO;
 import timestamps.models.Group;
 
 @Controller
-@RequestMapping("/groups")
+
 public class GroupInfoController {
     @Autowired
     private GroupDAO groupDAOImpl;
     
-    @RequestMapping(method = RequestMethod.GET)
+    @RequestMapping(method = RequestMethod.GET, path="/groups")
     public String getInfo(ModelMap model) {
     	model.addAttribute("entList", groupDAOImpl.getAll());
     	
     	return "indexgr";
     }
     
-    @RequestMapping(path="/add", method = RequestMethod.GET)
+    @RequestMapping(path="/groups-add", method = RequestMethod.GET)
     public String addGroup(@RequestParam("address") String address,
     		@RequestParam("name") String name, ModelMap model){
     	
@@ -44,7 +44,7 @@ public class GroupInfoController {
     	return "addgr";
     }
     
-    @RequestMapping(path="/delete", method = RequestMethod.GET)
+    @RequestMapping(path="/groups-delete", method = RequestMethod.GET)
     public String deleteGroup(@RequestParam("id") BigInteger id, ModelMap model){
     	
     	groupDAOImpl.delete(id);

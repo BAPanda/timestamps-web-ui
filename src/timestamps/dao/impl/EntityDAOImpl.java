@@ -63,6 +63,16 @@ public class EntityDAOImpl implements EntityDAO {
 					}
 				}, name);
 	}
+	
+	@Override
+	public List<Entity> getByGroup(BigInteger ID) {
+		String query = "SELECT \"Entity\".\"ID\", \"Entity\".\"Name\",  \"Group\", \"Address\""
+				+ "FROM \"Entity\" JOIN \"Group\" ON \"Entity\".\"Group\" = \"Group\".\"ID\""
+				+ "WHERE \"Group\".\"ID\" = ?";
+		
+		return jdbcTemplate.query(query, new EntityRowMapper(), ID.intValue());
+	}
+
 
 	@Override
 	public boolean validate(Entity entity) {
@@ -111,4 +121,5 @@ public class EntityDAOImpl implements EntityDAO {
 
 	}
 
+	
 }
